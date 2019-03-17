@@ -17,7 +17,7 @@
 		A5DD7E32223EBA2500B58120 /* yoursUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD7E31223EBA2500B58120 /* yoursUITests.swift */; };
 		A5DD7E40223EC4E000B58120 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD7E3F223EC4E000B58120 /* UserTableViewCell.swift */; };
 		A5DD7E44223EC95300B58120 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD7E43223EC95300B58120 /* UserTableViewController.swift */; };
-		A5DD7E46223ED38200B58120 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD7E45223ED38200B58120 /* User.swift */; };
+		A5DD7E48223EDBB400B58120 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD7E47223EDBB400B58120 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		A5DD7E33223EBA2500B58120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5DD7E3F223EC4E000B58120 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		A5DD7E43223EC95300B58120 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
-		A5DD7E45223ED38200B58120 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A5DD7E47223EDBB400B58120 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = /Users/chrissi/workspace/yours/yours/User.swift; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +105,13 @@
 		A5DD7E0E223EBA2500B58120 /* yours */ = {
 			isa = PBXGroup;
 			children = (
+				A5DD7E47223EDBB400B58120 /* User.swift */,
 				A5DD7E0F223EBA2500B58120 /* AppDelegate.swift */,
 				A5DD7E11223EBA2500B58120 /* FirstViewController.swift */,
 				A5DD7E13223EBA2500B58120 /* SecondViewController.swift */,
 				A5DD7E3F223EC4E000B58120 /* UserTableViewCell.swift */,
 				A5DD7E15223EBA2500B58120 /* Main.storyboard */,
 				A5DD7E43223EC95300B58120 /* UserTableViewController.swift */,
-				A5DD7E45223ED38200B58120 /* User.swift */,
 				A5DD7E18223EBA2500B58120 /* Assets.xcassets */,
 				A5DD7E1A223EBA2500B58120 /* LaunchScreen.storyboard */,
 				A5DD7E1D223EBA2500B58120 /* Info.plist */,
@@ -270,7 +270,7 @@
 			files = (
 				A5DD7E40223EC4E000B58120 /* UserTableViewCell.swift in Sources */,
 				A5DD7E14223EBA2500B58120 /* SecondViewController.swift in Sources */,
-				A5DD7E46223ED38200B58120 /* User.swift in Sources */,
+				A5DD7E48223EDBB400B58120 /* User.swift in Sources */,
 				A5DD7E10223EBA2500B58120 /* AppDelegate.swift in Sources */,
 				A5DD7E44223EC95300B58120 /* UserTableViewController.swift in Sources */,
 				A5DD7E12223EBA2500B58120 /* FirstViewController.swift in Sources */,

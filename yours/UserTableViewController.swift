@@ -13,8 +13,8 @@ class UserTableViewController: UITableViewController {
     var tableData: [User] = []
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         self.getApiData()
+        super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,12 +28,13 @@ class UserTableViewController: UITableViewController {
         URLSession.shared.dataTask(with: address!, completionHandler: { (data, response, error) in
             guard let data = data, error == nil else { return }
             do {
-                let json = try JSONSerialization.jsonObject(with: data) as! [String: Any]
-                for object in json["data"] as! [Any] {
-                    self.tableData += User()
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                for case let object as [String: Any] in json!["data"] as! [Any] {
+                        if let user = User(json: object) {
+                            self.tableData.append(user)
+                            DispatchQueue.main.async { self.tableView.reloadData() }
+                        }
                 }
-                print(self.tableData)
-                
             } catch let error as NSError {
                 print(error)
             }
@@ -53,11 +54,10 @@ class UserTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "UserTableViewCell"
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? UserTableViewCell else { fatalError("Fuck!") }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as? UserTableViewCell else { fatalError("Fuck!") }
         let user = tableData[indexPath.row]
         
-        cell.nameLabel.text = user["first_name"]
+        cell.nameLabel.text = user.firstName
 
         return cell
     }

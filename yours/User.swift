@@ -13,7 +13,15 @@ class User {
     let firstName: String
     let lastName: String
     
-    init(firstName: String, lastName: String) {
+    init?(json: [String: Any]) {
+        guard let firstName = json["first_name"] as? String else {
+            return nil
+        }
+        
+        guard let lastName = json["last_name"] as? String else {
+            return nil
+        }
+        
         self.firstName = firstName
         self.lastName = lastName
     }
