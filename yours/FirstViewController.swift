@@ -10,11 +10,15 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBAction func btnCallAPI(_ sender: Any) {
+        
+    }
+    
+    var tableData: [String: Any] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
 }
 
